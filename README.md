@@ -1,29 +1,25 @@
 # hitorie.cn
 
-## Project setup
-```
-npm install
-```
+---
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+网站逻辑
 
-### Compiles and minifies for production
-```
-npm run build
-```
+index->profiles.乐队档案
 
-### Run your tests
-```
-npm run test
-```
+​		 ->profiles.member
 
-### Lints and fixes files
-```
-npm run lint
-```
+​	     ->disc
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+扩展内容
+
+fans' work->绘画
+
+​				->video
+
+​				->公映企划
+
+about->一个页面
+
+
+
+admin-> 添加粉丝作品
