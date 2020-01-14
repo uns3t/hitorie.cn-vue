@@ -16,6 +16,7 @@ export default {
 
 <style>
 #app {
+  font-family: SFMono-Regular,Menlo,Monaco,Consolas,'Liberation Mono','Courier New',monospace;
 
 }
 </style>
