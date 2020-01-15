@@ -1,8 +1,70 @@
 <template>
+    <div style="text-align: center">
+        <div class="topborder"></div>
+        <div class="bottomborder"></div>
+        <div class="leftborder"></div>
+        <div class="rightborder"></div>
 
+        <div class="mask1">
+            <div class="menu-button">
+                <a href="Profiles-Bio.html"><div class="Profiles-in"></div></a>
+                <a href="Fans work.html"><div class="Fanswork-in"></div></a>
+                <a href="How to-buy.html"><div class="Howto-in"></div></a>
+                <a href="About us.html"><div class="Aboutus-in"></div></a>
+            </div>
+        </div>
+
+        <div class="menu-img" id="mask1"></div>
+        <div class="logo"></div>
+
+        <div class="main">
+            <div class="clientmain">
+                <div class="title"></div>
+                <div class="titleline"></div>
+                <div class="content">
+
+                    <p>Hitorie（ヒトリエ）中文粉丝站是一个于2018年由粉丝自发建立，无盈利目的情报网站。<br>致力于为使用中文的hitorie的粉丝<br>提供一个跨越语言与国籍的乐队资料获取&同人展示平台。<br>更多内容将在今后进一步完善。</p>
+                    <img src="../assets/asimg/grouplogo.png" class="grouplogo"></img>
+                    <br>
+                    <img src="../assets/asimg/staff1.png" class="stafflogo"></img>
+                    <br>
+                    <p2>weibo:<br>https://www.weibo.com/u/5667976052</p2>
+                    <br>
+                    <img src="../assets/asimg/staff2.png" class="stafflogo"></img>
+                    <br>
+                    <p2>weibo:<br>https://weibo.com/u/5581438258</p2>
+                    <br>
+                    <img src="../assets/asimg/staff3.png" class="stafflogo"></img>
+                    <br>
+                    <p2>weibo:<br>https://weibo.com/ayatsumi/</p2>
+                    <br>
+                    <img src="../assets/asimg/staff4.png" class="stafflogo"></img>
+                    <br>
+                    <p2>weibo:<br>https://UNKNOW</p2>
+                    <br>
+                    <img src="../assets/asimg/weibo.png" class="stafflogo"></img>
+                    <br>
+                    <p2>官方最新咨询搬运<br>weibo:<br>https://weibo.com/u/5176743229</p2>
+                    <br>
+                    <img src="../assets/asimg/qqgroup.png" class="stafflogo"></img>
+                    <br>
+                    <p2>ヒトリエ粉丝聚集地<br>qq群:<br>497511647</p2>
+                    <br>
+
+                    <p>我们长时间招募<br>网页制作/后台维护/翻译/文案/策划<br>欢迎加入我们！<br>qq群：675420262</p>
+                    <img src="../assets/asimg/pay.png" class="grouplogo"></img>
+                    <p>也欢迎赞助我们。<br>Hitorie（ヒトリエ）中文粉丝站是一个非盈利的网站。<br>所有收到的赞助款项将全部用于服务器与网页维护。</p>
+
+                </div>
+                <div class="whitebottom"></div>
+            </div>
+        </div>
+    </div>
 </template>
 
 <script>
+
+
     export default {
         name: "about"
     }
@@ -10,4 +72,219 @@
 
 <style scoped>
 
+    .mask1
+    {
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        width: 100%;
+        height: 100%;
+        display: none;
+        background: rgba(0, 0, 0, 0.7);
+    }
+    .menu-button
+    {
+        height: 432px;
+        width: 440px;
+        margin: auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+    .Profiles-in
+    {
+        float: left;
+        width: 440px;
+        height: 90px;
+        margin-bottom: 24px;
+        background: url("../assets/img/Profiles-in.png") no-repeat center center;
+        display: none;
+    }
+    .Profiles-in:hover
+    {
+        float: left;
+        width: 440px;
+        height: 90px;
+        margin-bottom: 24px;
+        background: url("../assets/img/Profiles-in-on.png") no-repeat center center;
+    }
+    .Fanswork-in
+    {
+        float: left;
+        width: 440px;
+        height: 90px;
+        margin-bottom: 24px;
+        background: url("../assets/img/Fans work-in.png") no-repeat center center;
+        display: none;
+    }
+    .Fanswork-in:hover
+    {
+        float: left;
+        width: 440px;
+        height: 90px;
+        margin-bottom: 24px;
+        background: url("../assets/img/Fans work-in-on.png") no-repeat center center;
+    }
+    .Howto-in
+    {
+        float: left;
+        width: 440px;
+        height: 90px;
+        margin-bottom: 24px;
+        background: url("../assets/img/How to-in.png") no-repeat center center;
+        display: none;
+    }
+    .Howto-in:hover
+    {
+        float: left;
+        width: 440px;
+        height: 90px;
+        margin-bottom: 24px;
+        background: url("../assets/img/How to-in-on.png") no-repeat center center;
+    }
+    .Aboutus-in
+    {
+        float: left;
+        width: 440px;
+        height: 90px;
+        margin-bottom: 24px;
+        background: url("../assets/img/About us-in.png") no-repeat center center;
+        display: none;
+    }
+    .Aboutus-in:hover
+    {
+        float: left;
+        width: 440px;
+        height: 90px;
+        margin-bottom: 24px;
+        background: url("../assets/img/About us-in-on.png") no-repeat center center;
+    }
+
+    .topborder
+    {
+        margin-left: -12px;
+        padding:0;
+        background-color: #4A4A4A;
+        height: 12px;
+        width: 100%;
+        position: fixed;
+        z-index: 9999;
+    }
+    .bottomborder
+    {
+        margin-left: -12px;
+        padding:0;
+        background-color: #4A4A4A;
+        height: 12px;
+        width: 100%;
+        position: fixed;
+        bottom: 0px;
+        z-index: 9999;
+    }
+    .leftborder
+    {
+        margin-left: 0px;
+        padding:0;
+        background-color: #4A4A4A;
+        height: 100%;
+        width: 12px;
+        position: fixed;
+        left: 0px;
+        z-index: 9999;
+    }
+    .rightborder
+    {
+        padding:0;
+        background-color: #4A4A4A;
+        height: 100%;
+        width: 12px;
+        position: fixed;
+        right: 0px;
+        z-index: 9999;
+    }
+
+    .menu-img
+    {
+        height: 16px;
+        width: 26px;
+        right: 30px;
+        top: 28px;
+        position: fixed;
+        background: url("../assets/img/menu.png") no-repeat center center;
+    }
+    .logo
+    {
+        float: left;
+        height: 124px;
+        width: 100%;
+        margin-top: 60px;
+        background: url("../assets/img/logo.png") no-repeat center center;
+    }
+
+    .main
+    {
+        width: 100%;
+        text-align: center;
+    }
+    .clientmain
+    {
+        margin: 0 auto;
+        width: 1024px;
+    }
+
+    .title
+    {
+        float: left;
+        margin-top: 45px;
+        height: 28px;
+        width: 142px;
+        background: url("../assets/asimg/title.png") no-repeat center center;
+    }
+    .titleline
+    {
+        float: left;
+        margin-top: 18px;
+        height: 2px;
+        width: 1024px;
+        background-color: #4A4A4A;
+    }
+
+    .content
+    {
+        float: left;
+        width: 1024px;
+        margin-top: 20px;
+    }
+    .content p
+    {
+        margin-top: 84px;
+        text-align: 24px;
+        color: #4A4A4A;
+    }
+    .content p2
+    {
+        color: #4A4A4A;
+        font-size: 12px;
+        text-align: 12px;
+    }
+    .grouplogo
+    {
+        margin-top: 84px;
+    }
+    .stafflogo
+    {
+        margin-top: 48px;
+        margin-bottom: 12px;
+    }
+
+    .whitebottom
+    {
+        height: 164px;
+        width: 1024px;
+        float: left;
+    }
 </style>

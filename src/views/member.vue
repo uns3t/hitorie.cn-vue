@@ -22,9 +22,9 @@
                 <div class="title"></div>
                 <div class="titleline"></div>
                 <div class="profiles-menu">
-                    <a href="Profiles-Bio.html"><div class="Bio"></div></a>
-                    <a href="Profiles-Member.html"><div class="Member"></div></a>
-                    <a href="Profiles-Disc.html"><div class="Disc"></div></a>
+                    <a @click="toOtherpage('/bio')"><div class="Bio"></div></a>
+                    <a @click="toOtherpage('/member')"><div class="Member"></div></a>
+                    <a @click="toOtherpage('/disc')"><div class="Disc"></div></a>
                 </div>
                 <div class="content">
                     <div class="character">
@@ -114,10 +114,54 @@
 <script>
     import "../assets/css/c2.css"
     export default {
-        name: "member"
+        name: "member",
+        methods:{
+            toOtherpage(path){
+                window.$router.push(path)
+            }
+        }
     }
 </script>
 
 <style scoped>
-
+    .Bio
+    {
+        float: left;
+        height: 39px;
+        width: 132px;
+        margin-bottom: 10px;
+        background: url("../assets/img/Bio.png") no-repeat center center;
+    }
+    .Bio:hover
+    {
+        float: left;
+        height: 39px;
+        width: 132px;
+        margin-bottom: 10px;
+        background: url("../assets/img/Bio-on.png") no-repeat center center;
+    }
+    .Member
+    {
+        float: left;
+        height: 39px;
+        width: 132px;
+        margin-bottom: 10px;
+        background: url("../assets/img/Member-on.png") no-repeat center center;
+    }
+    .Disc
+    {
+        float: left;
+        height: 39px;
+        width: 132px;
+        margin-bottom: 10px;
+        background: url("../assets/img/Disc.png") no-repeat center center;
+    }
+    .Disc:hover
+    {
+        float: left;
+        height: 39px;
+        width: 132px;
+        margin-bottom: 10px;
+        background: url("../assets/img/Disc-on.png") no-repeat center center;
+    }
 </style>

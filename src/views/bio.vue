@@ -14,9 +14,9 @@
             </div>
         </div>
 
+
         <div class="menu-img" id="mask1"></div>
         <div class="logo"></div>
-
         <div class="main">
             <div class="clientmain">
                 <div class="title"></div>
@@ -84,6 +84,47 @@
 </script>
 
 <style scoped>
+    .Bio
+    {
+        float: left;
+        height: 39px;
+        width: 132px;
+        margin-bottom: 10px;
+        background: url("../assets/img/Bio-on.png") no-repeat center center;
+    }
+    .Member
+    {
+        float: left;
+        height: 39px;
+        width: 132px;
+        margin-bottom: 10px;
+        background: url("../assets/img/Member.png") no-repeat center center;
+    }
+    .Member:hover
+    {
+        float: left;
+        height: 39px;
+        width: 132px;
+        margin-bottom: 10px;
+        background: url("../assets/img/Member-on.png") no-repeat center center;
+    }
+    .Disc
+    {
+        float: left;
+        height: 39px;
+        width: 132px;
+        margin-bottom: 10px;
+        background: url("../assets/img/Disc.png") no-repeat center center;
+    }
+    .Disc:hover
+    {
+        float: left;
+        height: 39px;
+        width: 132px;
+        margin-bottom: 10px;
+        background: url("../assets/img/Disc-on.png") no-repeat center center;
+    }
+
     a{
         cursor: pointer;
     }
