@@ -5,16 +5,17 @@
         <div class="leftborder"></div>
         <div class="rightborder"></div>
 
-        <div class="mask1">
-            <div class="menu-button">
-                <a href="Profiles-Bio.html"><div class="Profiles-in"></div></a>
-                <a href="Fans work.html"><div class="Fanswork-in"></div></a>
-                <a href="How to-buy.html"><div class="Howto-in"></div></a>
-                <a href="About us.html"><div class="Aboutus-in"></div></a>
+        <transition name="el-fade-in">
+            <div class="mask1" @click="hidemenu" v-show="showMenu">
+                <div class="menu-button">
+                    <a @click="toOtherpage('/bio')"><div class="Profiles-in"></div></a>
+                    <a @click="toOtherpage('/fanwork')"><div class="Fanswork-in"></div></a>
+                    <a @click="toOtherpage('/howtobuy')"><div class="Howto-in"></div></a>
+                    <a @click="toOtherpage('/about')"><div class="Aboutus-in"></div></a>
+                </div>
             </div>
-        </div>
-
-        <div class="menu-img" id="mask1"></div>
+        </transition>
+        <div class="menu-img" id="mask1" @click="tomenu"></div>
         <div class="logo"></div>
 
         <div class="main">
@@ -22,7 +23,6 @@
                 <div class="title"></div>
                 <div class="titleline"></div>
                 <div class="content">
-
                     <p>Hitorie（ヒトリエ）中文粉丝站是一个于2018年由粉丝自发建立，无盈利目的情报网站。<br>致力于为使用中文的hitorie的粉丝<br>提供一个跨越语言与国籍的乐队资料获取&同人展示平台。<br>更多内容将在今后进一步完善。</p>
                     <img src="../assets/asimg/grouplogo.png" class="grouplogo"></img>
                     <br>
@@ -66,7 +66,25 @@
 
 
     export default {
-        name: "about"
+        name: "about",
+        methods:{
+            toOtherpage(path){
+                window.$router.push(path)
+            },
+            tomenu(){
+                this.showMenu=true
+                console.log(this.showMenu)
+            },
+            hidemenu(e){
+                if(e.target.className==="mask1")
+                    this.showMenu=false
+            }
+        },
+        data(){
+            return{
+                showMenu:false
+            }
+        }
     }
 </script>
 
@@ -81,7 +99,7 @@
         bottom: 0px;
         width: 100%;
         height: 100%;
-        display: none;
+        /*display: none;*/
         background: rgba(0, 0, 0, 0.7);
     }
     .menu-button
@@ -102,7 +120,7 @@
         height: 90px;
         margin-bottom: 24px;
         background: url("../assets/img/Profiles-in.png") no-repeat center center;
-        display: none;
+        /*display: none;*/
     }
     .Profiles-in:hover
     {
@@ -119,7 +137,7 @@
         height: 90px;
         margin-bottom: 24px;
         background: url("../assets/img/Fans work-in.png") no-repeat center center;
-        display: none;
+        /*display: none;*/
     }
     .Fanswork-in:hover
     {
@@ -136,7 +154,7 @@
         height: 90px;
         margin-bottom: 24px;
         background: url("../assets/img/How to-in.png") no-repeat center center;
-        display: none;
+        /*display: none;*/
     }
     .Howto-in:hover
     {
@@ -153,7 +171,7 @@
         height: 90px;
         margin-bottom: 24px;
         background: url("../assets/img/About us-in.png") no-repeat center center;
-        display: none;
+        /*display: none;*/
     }
     .Aboutus-in:hover
     {
