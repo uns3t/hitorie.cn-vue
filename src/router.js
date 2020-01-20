@@ -5,7 +5,10 @@ import bio from "./views/bio"
 import disc from "./views/disc";
 import member from "./views/member";
 import about from "./views/about";
-
+import fansworkcd from "./views/fansworkcd";
+import fansworkImg from "./views/fansworkImg";
+import fansworkvideo from "./views/fansworkvideo";
+import howto from "./views/howto";
 
 Vue.use(Router)
 
@@ -27,6 +30,22 @@ window.$router=new Router({
         {
             path: "/about",
             component: about,
+        },
+        {
+            path: "/fanwork",
+            component: fansworkImg,
+        },
+        {
+            path: "/fanworkvd",
+            component: fansworkvideo,
+        },
+        {
+            path: "/fanworkcd",
+            component: fansworkcd,
+        },
+        {
+            path: "/howto",
+            component: howto,
         },
         {
             path: "/bio",
