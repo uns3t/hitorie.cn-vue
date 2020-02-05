@@ -174,14 +174,7 @@
         width: 172px;
         background: url("../assets/fwimg/fwtitle.png") no-repeat center center;
     }
-    .titleline
-    {
-        float: left;
-        margin-top: 18px;
-        height: 2px;
-        width: 1024px;
-        background-color: #4A4A4A;
-    }
+
 
     .fw-menu
     {
@@ -238,12 +231,4 @@
         margin-bottom: 10px;
         background: url("../assets/fwimg/2018-4-12-on.png") no-repeat center center;
     }
-    .whitebottom
-    {
-        height: 68px;
-        width: 1024px;
-        float: left;
-    }
-
-
 </style>

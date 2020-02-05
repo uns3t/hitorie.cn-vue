@@ -35,6 +35,77 @@ export default {
     background-color: #FFF；
   }
 
+  .Bio
+  {
+    float: left;
+    height: 39px;
+    width: 132px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    background: url("./assets/img/Bio.png") no-repeat center center;
+  }
+  .Bio:hover
+  {
+    float: left;
+    height: 39px;
+    width: 132px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    background: url("./assets/img/Bio-on.png") no-repeat center center;
+  }
+
+  .Member
+  {
+    float: left;
+    height: 39px;
+    width: 132px;
+    margin-bottom: 10px;
+    background: url("./assets/img/Member.png") no-repeat center center;
+  }
+  .Member:hover
+  {
+    float: left;
+    height: 39px;
+    width: 132px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    background: url("./assets/img/Member-on.png") no-repeat center center;
+  }
+  .Disc
+  {
+    float: left;
+    height: 39px;
+    width: 132px;
+    margin-bottom: 10px;
+
+    background: url("./assets/img/Disc.png") no-repeat center center;
+  }
+  .Disc:hover
+  {
+    float: left;
+    height: 39px;
+    width: 132px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    background: url("./assets/img/Disc-on.png") no-repeat center center;
+  }
+
+  .titleline
+  {
+    float: left;
+    margin-top: 18px;
+    height: 2px;
+    width: 1024px;
+    background-color: #4A4A4A;
+  }
+
+  .profiles-menu
+  {
+    float: left;
+    width: 145px;
+    margin-top: 20px;
+  }
+
   .mask1
   {
     position: fixed;
@@ -200,8 +271,13 @@ export default {
     margin: 0 auto;
     width: 1024px;
   }
+  .whitebottom
+  {
+    height: 164px;
+    width: 1024px;
+    float: left;
+  }
   #app {
   font-family: SFMono-Regular,Menlo,Monaco,Consolas,'Liberation Mono','Courier New',monospace;
-
 }
 </style>

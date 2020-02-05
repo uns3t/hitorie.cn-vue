@@ -138,22 +138,7 @@
 </script>
 
 <style scoped>
-    .Bio
-    {
-        float: left;
-        height: 39px;
-        width: 132px;
-        margin-bottom: 10px;
-        background: url("../assets/img/Bio.png") no-repeat center center;
-    }
-    .Bio:hover
-    {
-        float: left;
-        height: 39px;
-        width: 132px;
-        margin-bottom: 10px;
-        background: url("../assets/img/Bio-on.png") no-repeat center center;
-    }
+
     .Member
     {
         float: left;
@@ -162,24 +147,6 @@
         margin-bottom: 10px;
         background: url("../assets/img/Member-on.png") no-repeat center center;
     }
-    .Disc
-    {
-        float: left;
-        height: 39px;
-        width: 132px;
-        margin-bottom: 10px;
-        background: url("../assets/img/Disc.png") no-repeat center center;
-    }
-    .Disc:hover
-    {
-        float: left;
-        height: 39px;
-        width: 132px;
-        margin-bottom: 10px;
-        background: url("../assets/img/Disc-on.png") no-repeat center center;
-    }
-
-
 
 
     .title
@@ -190,21 +157,7 @@
         width: 117px;
         background: url("../assets/img/Profiles.png") no-repeat center center;
     }
-    .titleline
-    {
-        float: left;
-        margin-top: 18px;
-        height: 2px;
-        width: 1024px;
-        background-color: #4A4A4A;
-    }
 
-    .profiles-menu
-    {
-        float: left;
-        width: 145px;
-        margin-top: 20px;
-    }
     .content
     {
         float: left;
@@ -253,12 +206,5 @@
     }
 
 
-
-    .whitebottom
-    {
-        height: 68px;
-        width: 1024px;
-        float: left;
-    }
 
 </style>

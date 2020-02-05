@@ -118,10 +118,5 @@
         margin-bottom: 12px;
     }
 
-    .whitebottom
-    {
-        height: 164px;
-        width: 1024px;
-        float: left;
-    }
+
 </style>

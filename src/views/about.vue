@@ -89,8 +89,6 @@
 </script>
 
 <style scoped>
-
-
     .title
     {
         float: left;
@@ -99,21 +97,7 @@
         width: 142px;
         background: url("../assets/asimg/title.png") no-repeat center center;
     }
-    .titleline
-    {
-        float: left;
-        margin-top: 18px;
-        height: 2px;
-        width: 1024px;
-        background-color: #4A4A4A;
-    }
-
-    .content
-    {
-        float: left;
-        width: 1024px;
-        margin-top: 20px;
-    }
+    
     .content p
     {
         margin-top: 84px;
@@ -136,10 +120,4 @@
         margin-bottom: 12px;
     }
 
-    .whitebottom
-    {
-        height: 164px;
-        width: 1024px;
-        float: left;
-    }
 </style>
