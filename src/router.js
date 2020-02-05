@@ -32,15 +32,15 @@ window.$router=new Router({
             component: about,
         },
         {
-            path: "/fanwork",
+            path: "/fanswork",
             component: fansworkImg,
         },
         {
-            path: "/fanworkvd",
+            path: "/fansworkvd",
             component: fansworkvideo,
         },
         {
-            path: "/fanworkcd",
+            path: "/fansworkcd",
             component: fansworkcd,
         },
         {

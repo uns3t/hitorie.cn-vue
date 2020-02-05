@@ -9,8 +9,8 @@
             <div class="mask1" @click="hidemenu" v-show="showMenu">
                 <div class="menu-button">
                     <a @click="toOtherpage('/bio')"><div class="Profiles-in"></div></a>
-                    <a @click="toOtherpage('/fanwork')"><div class="Fanswork-in"></div></a>
-                    <a @click="toOtherpage('/howtobuy')"><div class="Howto-in"></div></a>
+                    <a @click="toOtherpage('/fanswork')"><div class="Fanswork-in"></div></a>
+                    <a @click="toOtherpage('/howto')"><div class="Howto-in"></div></a>
                     <a @click="toOtherpage('/about')"><div class="Aboutus-in"></div></a>
                 </div>
             </div>
