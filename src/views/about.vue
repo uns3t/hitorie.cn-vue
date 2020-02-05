@@ -89,6 +89,78 @@
 </script>
 
 <style scoped>
+    .topborder
+    {
+        margin-left: -12px;
+        padding:0;
+        background-color: #4A4A4A;
+        height: 12px;
+        width: 100%;
+        position: fixed;
+        z-index: 9999;
+    }
+    .bottomborder
+    {
+        margin-left: -12px;
+        padding:0;
+        background-color: #4A4A4A;
+        height: 12px;
+        width: 100%;
+        position: fixed;
+        bottom: 0px;
+        z-index: 9999;
+    }
+    .leftborder
+    {
+        margin-left: 0px;
+        padding:0;
+        background-color: #4A4A4A;
+        height: 100%;
+        width: 12px;
+        position: fixed;
+        left: 0px;
+        z-index: 9999;
+    }
+    .rightborder
+    {
+        padding:0;
+        background-color: #4A4A4A;
+        height: 100%;
+        width: 12px;
+        position: fixed;
+        right: 0px;
+        z-index: 9999;
+    }
+
+    .menu-img
+    {
+        height: 16px;
+        width: 26px;
+        right: 30px;
+        top: 28px;
+        position: fixed;
+        background: url("../assets/img/menu.png") no-repeat center center;
+    }
+    .logo
+    {
+        float: left;
+        height: 124px;
+        width: 100%;
+        margin-top: 60px;
+        background: url("../assets/img/logo.png") no-repeat center center;
+    }
+
+    .main
+    {
+        width: 100%;
+        text-align: center;
+    }
+    .clientmain
+    {
+        margin: 0 auto;
+        width: 1024px;
+    }
+
     .title
     {
         float: left;
@@ -97,7 +169,21 @@
         width: 142px;
         background: url("../assets/asimg/title.png") no-repeat center center;
     }
-    
+    .titleline
+    {
+        float: left;
+        margin-top: 18px;
+        height: 2px;
+        width: 1024px;
+        background-color: #4A4A4A;
+    }
+
+    .content
+    {
+        float: left;
+        width: 1024px;
+        margin-top: 20px;
+    }
     .content p
     {
         margin-top: 84px;
@@ -120,4 +206,10 @@
         margin-bottom: 12px;
     }
 
+    .whitebottom
+    {
+        height: 164px;
+        width: 1024px;
+        float: left;
+    }
 </style>

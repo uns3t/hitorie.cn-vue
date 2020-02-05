@@ -18,7 +18,7 @@
         <div class="menu-img" id="mask1" @click="tomenu"></div>
         <div class="logo"></div>
         <div class="main">
-            <div class="clientmain">
+            <div class="clientmain" >
                 <div class="title"></div>
                 <div class="titleline"></div>
                 <div class="fw-menu">
@@ -26,21 +26,24 @@
                     <a @click="toOtherpage('/fansworkvd')"><div class="vid"></div></a>
                     <a @click="toOtherpage('/fansworkcd')"><div class="cd421"></div></a>
                 </div>
-                <div class="content2">
 
-                    <div class="v-waterfall-content" id="v-waterfall">
-                        <div v-for="img in waterfallList"
-                             class="v-waterfall-item"
-                             :style="{top:img.top+'px',left:img.left+'px',width:waterfallImgWidth+'px',height:img.height}">
+                    <div class="content2" >
 
-                            <a class="grid__link" ><img :src="img.src" alt="Some image" />{{img.name}}<br/>{{"by"+img.auth}}</a>
-                        </div>
+                        <transition name="el-zoom-in-center">
+
+                            <div class="v-waterfall-content" id="v-waterfall" v-show="showImg">
+                                <div v-for="img in waterfallList"
+                                     class="v-waterfall-item"
+                                     :style="{top:img.top+'px',left:img.left+'px',width:waterfallImgWidth+'px',height:img.height}">
+
+                                    <a class="grid__link" ><img v-lazy="img.src" alt="Some image" />{{img.name}}<br/>{{"by"+img.auth}}</a>
+                                </div>
+                            </div>
+                        </transition>
+
                     </div>
 
-
-                    </div>
-
-                </div>
+            </div>
                 <div class="whitebottom">
                     <div class="content content--side content--right">
                         <div class="control control--effects">
@@ -59,6 +62,7 @@
         data(){
             return{
                 showMenu:false,
+                showImg:false,
                 waterfallList:[],
                 imgArr:[
 
@@ -206,7 +210,7 @@
 
         mounted(){
 
-
+            this.showImg=true
             this.calculationWidth();
         },
         methods:{
@@ -244,8 +248,8 @@
                         let imgData = {};
                         imgData.height = this.waterfallImgWidth/aImg.width*aImg.height;
                         imgData.src = this.imgList[i];
-                        imgData.name=this.imgDetail[2*i-1]
-                        imgData.auth=this.imgDetail[2*i]
+                        imgData.name=this.imgDetail[2*i]
+                        imgData.auth=this.imgDetail[2*i+1]
                         this.waterfallList.push(imgData);
                         this.rankImg(imgData);
                     }

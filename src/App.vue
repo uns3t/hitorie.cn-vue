@@ -115,7 +115,7 @@ export default {
     bottom: 0px;
     width: 100%;
     height: 100%;
-
+    z-index: 9999;
     background: rgba(0, 0, 0, 0.7);
   }
   .menu-button
@@ -212,9 +212,10 @@ export default {
   .bottomborder
   {
     margin-left: -12px;
+    /*margin-top: 20px;*/
     padding:0;
     background-color: #4A4A4A;
-    height: 12px;
+    height: 1px;
     width: 100%;
     position: fixed;
     bottom: 0px;

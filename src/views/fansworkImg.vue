@@ -27,17 +27,21 @@
                     <a @click="toOtherpage('/fansworkcd')"><div class="cd421"></div></a>
                 </div>
                 <div class="content2">
+                    <transition name="el-zoom-in-center">
 
-                    <div class="v-waterfall-content" id="v-waterfall">
-                        <div v-for="img in waterfallList"
-                             class="v-waterfall-item"
-                             :style="{top:img.top+'px',left:img.left+'px',width:waterfallImgWidth+'px',height:img.height}">
+                        <div class="v-waterfall-content" id="v-waterfall" v-show="showImg">
+                            <div v-for="img in waterfallList"
+                                 class="v-waterfall-item"
+                                 :style="{top:img.top+'px',left:img.left+'px',width:waterfallImgWidth+'px',height:img.height}">
 
-                            <a class="grid__link" ><img :src="img.src" alt="Some image" />{{img.name}}<br/>{{"by"+img.auth}}</a>
+                                <a class="grid__link" ><img v-lazy="img.src" alt="Some image" />{{img.name}}<br/>{{"by"+img.auth}}</a>
+                            </div>
                         </div>
-                    </div>
+                    </transition>
+
 
                 </div>
+
                 <div class="whitebottom">
                     <div class="content content--side content--right">
                         <div class="control control--effects">
@@ -121,6 +125,7 @@
         data(){
             return{
                 showMenu:false,
+                showImg:false,
                 waterfallList:[],
                 imgArr:[
 
@@ -160,6 +165,7 @@
         },
 
         mounted(){
+            this.showImg=true
             this.calculationWidth();
         },
     }
