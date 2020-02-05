@@ -28,32 +28,12 @@
                 </div>
                 <div class="content2">
 
-                    <div style="height: 100%">
+                    <div class="v-waterfall-content" id="v-waterfall">
+                        <div v-for="img in waterfallList"
+                             class="v-waterfall-item"
+                             :style="{top:img.top+'px',left:img.left+'px',width:waterfallImgWidth+'px',height:img.height}">
 
-                        <div class="grid grid--type-b">
-                            <div class="grid__sizer"></div>
-                            <div class="grid__item">
-                                <a class="grid__link" ><img class="grid__img" src="../assets/fwimg/pic/1.jpg" alt="Some image" />5カウントハロー<br>by 须须</a>
-                            </div>
-                            <div class="grid__item">
-                                <a class="grid__link" ><img class="grid__img" src="../assets/fwimg/pic/2.jpg" alt="Some image" />Eve stepper<br>by 尖牙</a>
-                            </div>
-                            <div class="grid__item">
-                                <a class="grid__link" ><img class="grid__img" src="../assets/fwimg/pic/3.jpg" alt="Some image" />fuyuno<br>by 病理</a>
-                            </div>
-                            <div class="grid__item">
-                                <a class="grid__link" ><img class="grid__img" src="../assets/fwimg/pic/4.png" alt="Some image" />non-fiction four e p<br>by KI</a>
-                            </div>
-                            <div class="grid__item">
-                                <a class="grid__link" ><img class="grid__img" src="../assets/fwimg/pic/5.jpg" alt="Some image" />rurarura<br>by ？？？</a>
-                            </div>
-                            <div class="grid__item">
-                                <a class="grid__link" ><img class="grid__img" src="../assets/fwimg/pic/6.jpg" alt="Some image" />senseless wonder<br>by 流火</a>
-                            </div>
-                            <div class="grid__item">
-                                <a class="grid__link" ><img class="grid__img" src="../assets/fwimg/pic/7.jpg" alt="Some image" />tosenbo<br>by 尖牙</a>
-                            </div>
-
+                            <a class="grid__link" ><img :src="img.src" alt="Some image" />{{img.name}}<br/>{{"by"+img.auth}}</a>
                         </div>
                     </div>
 
@@ -85,6 +65,55 @@
                 if(e.target.className==="mask1")
                     this.showMenu=false
             },
+            calculationWidth(){
+                let domWidth = document.getElementById("v-waterfall").offsetWidth;
+                if (!this.waterfallImgWidth && this.waterfallImgCol){
+                    this.waterfallImgWidth = (domWidth-this.waterfallImgRight*this.waterfallImgCol)/this.waterfallImgCol;
+                }else if(this.waterfallImgWidth && !this.waterfallImgCol){
+                    this.waterfallImgCol = Math.floor(domWidth/(this.waterfallImgWidth+this.waterfallImgRight))
+                }
+                //初始化偏移高度数组
+                this.waterfallDeviationHeight = new Array(this.waterfallImgCol);
+                for (let i = 0;i < this.waterfallDeviationHeight.length;i++){
+                    this.waterfallDeviationHeight[i] = 0;
+                }
+                this.imgPreloading()
+            },
+            //图片预加载
+            imgPreloading(){
+                for (let i = 0;i < this.imgList.length;i++){
+                    let aImg = new Image();
+                    aImg.src = this.imgList[i];
+                    aImg.onload = aImg.onerror = (e)=>{
+                        let imgData = {};
+                        imgData.height = this.waterfallImgWidth/aImg.width*aImg.height;
+                        imgData.src = this.imgList[i];
+                        imgData.name=this.imgName[i]
+                        imgData.auth=this.imgAuther[i]
+                        this.waterfallList.push(imgData);
+                        this.rankImg(imgData);
+                    }
+                }
+            },
+            //瀑布流布局
+            rankImg(imgData){
+                let {waterfallImgWidth,waterfallImgRight,waterfallImgBottom,waterfallDeviationHeight,waterfallImgCol} = this;
+                //for (let i = 0;i < this.waterfallList.length;i++){
+                let minIndex = this.filterMin();
+                imgData.top = waterfallDeviationHeight[minIndex];
+                imgData.left = minIndex*(waterfallImgRight+waterfallImgWidth);
+                waterfallDeviationHeight[minIndex] += imgData.height + waterfallImgBottom;
+                //}
+                console.log(imgData);
+            },
+            /**
+             * 找到最短的列并返回下标
+             * @returns {number} 下标
+             */
+            filterMin(){
+                const min = Math.min.apply(null, this.waterfallDeviationHeight);
+                return this.waterfallDeviationHeight.indexOf(min);
+            }
         },
 
 
@@ -92,79 +121,65 @@
         data(){
             return{
                 showMenu:false,
+                waterfallList:[],
+                imgArr:[
+
+                ],
+                waterfallImgWidth:300,
+                waterfallImgCol:3,
+                waterfallImgRight:20,
+                waterfallImgBottom:50,
+                waterfallDeviationHeight:[],
+                imgName:[
+                    "5カウントハロー",
+                    "Eve stepper",
+                    "fuyuno",
+                    "non-fiction four e p",
+                    "rurarura",
+                    "senseless wonder",
+                    "tosenbo"
+                ],
+                imgAuther:[
+                    "须须",
+                    "尖牙",
+                    "病理",
+                    "KI",
+                    "???",
+                    "流火",
+                    "尖牙",
+                ],
+                imgList:[
+                    require('../assets/fwimg/pic/1.jpg'),
+                    require('../assets/fwimg/pic/2.jpg'),
+                    require('../assets/fwimg/pic/3.jpg'),
+                    require('../assets/fwimg/pic/4.png'),
+                    require('../assets/fwimg/pic/5.jpg'),
+                    require('../assets/fwimg/pic/6.jpg'),
+                    require('../assets/fwimg/pic/7.jpg'),]
             }
         },
-        mounted() {
 
-        }
+        mounted(){
+            this.calculationWidth();
+        },
     }
 </script>
 
 <style scoped>
 
-
-
-
-    .grid {
-        position: relative;
-        z-index: 2;
-        display: block;
-        margin: 0 auto;
-    }
-
-
-
-
-    .grid__sizer {
-        margin-bottom: 0 !important;
-    }
-
-    .grid__link,
-    .grid__img {
-        display: block;
-    }
-
-    .grid__img {
-        width: 100%;
-    }
-
-    .grid__deco {
-        position: absolute;
-        top: 0;
-        left: 0;
-        pointer-events: none;
-    }
-
-    .grid__deco path {
-        fill: none;
-        stroke: #fff;
-        stroke-width: 2px;
-    }
-
-    .grid__reveal {
-        position: absolute;
-        z-index: 50;
-        top: 0;
-        left: 0;
+    .v-waterfall-content{
         width: 100%;
         height: 100%;
-        pointer-events: none;
-        opacity: 0;
-        background-color: #000;
+        position: relative;
     }
-
-    .grid .grid__item,
-    .grid .grid__sizer {
+    .v-waterfall-item{
         float: left;
-        width: calc(50% - 20px);
-        margin: 0 10px 20px;
+        position: absolute;
     }
-
-
-
-
-
-
+    .v-waterfall-item img{
+        width: 300px;
+        height: auto;
+    }
 
     .title
     {
