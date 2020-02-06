@@ -122,7 +122,7 @@
             },
             tomenu(){
                 this.showMenu=true
-                console.log(this.showMenu)
+
             },
             hidemenu(e){
                 if(e.target.className==="mask1")

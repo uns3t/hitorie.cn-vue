@@ -21,20 +21,13 @@ export default {
     padding:0;
     border:0;
   }
-  html
-  {
-    height: 100%;
-  }
   body
   {
     margin:0;
     padding:0;
-    border:0;
-    width: 100%;
-    height: 100%;
-    background-color: #FFF；
+    width: calc(100% - 24px);
+    background-color: #FFF;
   }
-
   .Bio
   {
     float: left;
@@ -212,7 +205,6 @@ export default {
   .bottomborder
   {
     margin-left: -12px;
-    /*margin-top: 20px;*/
     padding:0;
     background-color: #4A4A4A;
     height: 1px;
@@ -255,7 +247,7 @@ export default {
   }
   .logo
   {
-    float: left;
+    display: inline-block;
     height: 124px;
     width: 100%;
     margin-top: 60px;
@@ -279,6 +271,6 @@ export default {
     float: left;
   }
   #app {
-  font-family: SFMono-Regular,Menlo,Monaco,Consolas,'Liberation Mono','Courier New',monospace;
-}
+    font-family: SFMono-Regular,Menlo,Monaco,Consolas,'Liberation Mono','Courier New',monospace;
+  }
 </style>

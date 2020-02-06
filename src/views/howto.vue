@@ -10,13 +10,13 @@
                 <div class="menu-button">
                     <a @click="toOtherpage('/bio')"><div class="Profiles-in"></div></a>
                     <a @click="toOtherpage('/fanswork')"><div class="Fanswork-in"></div></a>
-                    <a @click="toOtherpage('/howtobuy')"><div class="Howto-in"></div></a>
+                    <a @click="toOtherpage('/howto')"><div class="Howto-in"></div></a>
                     <a @click="toOtherpage('/about')"><div class="Aboutus-in"></div></a>
                 </div>
             </div>
         </transition>
         <div class="menu-img" id="mask1" @click="tomenu"></div>
-        <div class="logo" style="display:block"></div>
+        <div class="logo"></div>
 
         <div class="main">
             <div class="clientmain">
@@ -60,7 +60,7 @@
             },
             tomenu(){
                 this.showMenu=true
-                console.log(this.showMenu)
+
             },
             hidemenu(e){
                 if(e.target.className==="mask1")

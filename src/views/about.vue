@@ -22,7 +22,7 @@
             <div class="clientmain">
                 <div class="title"></div>
                 <div class="titleline"></div>
-                <div class="content">
+                <div class="content" style="text-align: center">
                     <p>Hitorie（ヒトリエ）中文粉丝站是一个于2018年由粉丝自发建立，无盈利目的情报网站。<br>致力于为使用中文的hitorie的粉丝<br>提供一个跨越语言与国籍的乐队资料获取&同人展示平台。<br>更多内容将在今后进一步完善。</p>
                     <img src="../assets/asimg/grouplogo.png" class="grouplogo"></img>
                     <br>
@@ -73,7 +73,6 @@
             },
             tomenu(){
                 this.showMenu=true
-                console.log(this.showMenu)
             },
             hidemenu(e){
                 if(e.target.className==="mask1")
@@ -84,7 +83,8 @@
             return{
                 showMenu:false
             }
-        }
+        },
+
     }
 </script>
 

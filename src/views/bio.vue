@@ -80,7 +80,7 @@
             },
             tomenu(){
                 this.showMenu=true
-                console.log(this.showMenu)
+
             },
             hidemenu(e){
                 if(e.target.className==="mask1")
@@ -91,11 +91,13 @@
             return{
                 showMenu:false
             }
-        }
+        },
+
     }
 </script>
 
 <style scoped>
+
     .Bio
     {
         float: left;
@@ -129,7 +131,6 @@
         font-size: 16px;
         line-height: 20px;
         text-align: left;
-
     }
 
 </style>

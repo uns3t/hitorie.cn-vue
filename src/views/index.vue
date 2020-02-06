@@ -56,8 +56,7 @@
         height: 116px;
         left: 50%;
         top: 50%;
-        margin-left: -310px;
-        margin-top: -58px;
+        transform: translate(-50%, -50%);
         background: url("../assets/img/logo1.png") no-repeat center center;
         z-index: 1111;
     }
@@ -68,8 +67,7 @@
         height: 116px;
         left: 50%;
         top: 50%;
-        margin-left: -310px;
-        margin-top: -58px;
+        transform: translate(-50%, -50%);
         background: url("../assets/img/logo2.png") no-repeat center center;
         z-index: 1111;
     }

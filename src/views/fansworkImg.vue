@@ -63,7 +63,7 @@
             },
             tomenu(){
                 this.showMenu=true
-                console.log(this.showMenu)
+
             },
             hidemenu(e){
                 if(e.target.className==="mask1")
@@ -108,7 +108,7 @@
                 imgData.left = minIndex*(waterfallImgRight+waterfallImgWidth);
                 waterfallDeviationHeight[minIndex] += imgData.height + waterfallImgBottom;
                 //}
-                console.log(imgData);
+
             },
             /**
              * 找到最短的列并返回下标
@@ -130,7 +130,7 @@
                 imgArr:[
 
                 ],
-                waterfallImgWidth:300,
+                waterfallImgWidth:280,
                 waterfallImgCol:3,
                 waterfallImgRight:20,
                 waterfallImgBottom:50,
@@ -183,7 +183,7 @@
         position: absolute;
     }
     .v-waterfall-item img{
-        width: 300px;
+        width: 280px;
         height: auto;
     }
 
